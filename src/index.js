@@ -1,7 +1,7 @@
 const express = require('express');
 const { PORT } = require('./constants.js');
 const path = require('path');
-
+const routes = require('./router');
 
 const app = express();
 
@@ -13,5 +13,7 @@ app.use(express.urlencoded({ extended: false }));
 app.get('/', (req, res) => {
     res.send('Hello home page!');
 });
+
+app.use(routes)
 
 app.listen(PORT, () => console.log(`Server is listening on port: ${PORT}...`));
