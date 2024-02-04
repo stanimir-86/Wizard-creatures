@@ -15,5 +15,6 @@ JS Backend
 -render home page in hbs
 7.Convert all html views to handlebars.
 -Group views by meaning.
+8.Add controller folder with home controller.
 
 
