@@ -7,7 +7,7 @@ const routes = require('./router');
 const app = express();
 
 //Express Config
-app.use(express.static(path.resolve(__dirname, './puvlic')));
+app.use(express.static(path.resolve(__dirname, './public')));
 app.use(express.urlencoded({ extended: false }));
 
 //Handlebars Config
@@ -17,7 +17,9 @@ app.set('views', 'src/views');
 
 //Routes
 app.get('/', (req, res) => {
-    res.send('Hello home page!');
+
+
+    res.render('home');
 });
 
 app.use(routes)
