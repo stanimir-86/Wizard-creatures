@@ -12,5 +12,8 @@ JS Backend
 -configure view engine.
 -add main layout.
 -fix hyperlink stiles
+-render home page in hbs
+7.Convert all html views to handlebars.
+-Group views by meaning.
 
 
