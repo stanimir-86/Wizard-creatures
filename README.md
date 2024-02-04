@@ -6,6 +6,10 @@ JS Backend
 -configure static middleware
 -configure bodyparser
 -configure routes
--get recources
+4.Add images and CSS in public directory.
+5.Add html files in views directory.
+6.Install express-handlebars.
+-configure view engine.
+-add main layout.
 
 
