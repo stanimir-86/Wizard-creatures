@@ -24,5 +24,6 @@ JS Backend
 -add controller to routes.
 -fix navigations in the nav bar(login,register,logout).
 -render register page
+-render login page
 
 

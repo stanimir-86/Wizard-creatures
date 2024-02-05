@@ -1,6 +1,6 @@
 const express = require('express');
 const handlebars = require('express-handlebars');
-const { PORT, connectionString } = require('./constants.js');
+const { PORT, connectionString } = require('./constants');
 const path = require('path');
 const routes = require('./router');
 const mongoose = require('mongoose');
