@@ -16,5 +16,8 @@ JS Backend
 7.Convert all html views to handlebars.
 -Group views by meaning.
 8.Add controller folder with home controller.
+9.Add database
+-install mongoose
+-connect to db
 
 
