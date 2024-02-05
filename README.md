@@ -16,8 +16,13 @@ JS Backend
 7.Convert all html views to handlebars.
 -Group views by meaning.
 8.Add controller folder with home controller.
-9.Add database
--install mongoose
--connect to db
+9.Add database.
+-install mongoose.
+-connect to db.
+10.Authentication.
+-user controller.
+-add controller to routes.
+-fix navigations in the nav bar(login,register,logout).
+-render register page
 
 
