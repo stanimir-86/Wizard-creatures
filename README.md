@@ -33,6 +33,9 @@ JS Backend
 -validate email already exists.
 12.Hash password.
 -install bcrypt.
--hash password
+-hash password.
+13.Login
+-find user by email.
+-validate password with hash.
 
 
