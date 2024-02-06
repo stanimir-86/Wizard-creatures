@@ -25,5 +25,9 @@ JS Backend
 -fix navigations in the nav bar(login,register,logout).
 -render register page.
 -render login page.
+11.Add user model.
+-simple validation in Schema
+-add method for register
+-create first User record in the DB
 
 
