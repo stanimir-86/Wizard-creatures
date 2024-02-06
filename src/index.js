@@ -4,12 +4,14 @@ const { PORT, connectionString } = require('./constants');
 const path = require('path');
 const routes = require('./router');
 const mongoose = require('mongoose');
+const cookieParser = require('cookie-parser');
 
 const app = express();
 
 //Express Config
 app.use(express.static(path.resolve(__dirname, './public')));
 app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
 
 //Handlebars Config
 app.engine('hbs', handlebars.engine({ extname: 'hbs' }));
