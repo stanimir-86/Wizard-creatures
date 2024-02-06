@@ -31,7 +31,8 @@ JS Backend
 -create first User record in the DB.
 -validate password missmach.
 -validate email already exists.
-12.Hash password
--install bcrypt
+12.Hash password.
+-install bcrypt.
+-hash password
 
 
