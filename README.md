@@ -46,5 +46,6 @@ JS Backend
 -install cookie-parcer
 -configure cookie-parser
 -set cookie with the token
+16.Implement Logout
 
 
