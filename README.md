@@ -19,11 +19,11 @@ JS Backend
 9.Add database.
 -install mongoose.
 -connect to db.
-10.Authentication.
+10.Prepare user functionality.
 -user controller.
 -add controller to routes.
 -fix navigations in the nav bar(login,register,logout).
--render register page
--render login page
+-render register page.
+-render login page.
 
 
