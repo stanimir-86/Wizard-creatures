@@ -29,6 +29,9 @@ JS Backend
 -simple validation in Schema.
 -add method for register.
 -create first User record in the DB.
--validate password missmach
+-validate password missmach.
+-validate email already exists.
+12.Hash password
+-install bcrypt
 
 
