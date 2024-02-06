@@ -41,6 +41,10 @@ JS Backend
 -install jsonwebtoken.
 -promisify jsonwebtoken.
 -generate secret.
--generate tken in service controler
+-generate tken in service controler.
+15.Return token in cookie.
+-install cookie-parcer
+-configure cookie-parser
+-set cookie with the token
 
 
