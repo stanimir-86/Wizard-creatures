@@ -52,5 +52,9 @@ JS Backend
 -add auth middleware and import in in express config below cookieParser
 -decode the token
 -handle invalid token
+-provide authorization
+18.Dynamic navigation
+-conditional options in navigation
+-add data to res.locals for hbs templates
 
 
