@@ -43,9 +43,14 @@ JS Backend
 -generate secret.
 -generate tken in service controler.
 15.Return token in cookie.
--install cookie-parcer
--configure cookie-parser
--set cookie with the token
-16.Implement Logout
+-install cookie-parcer.
+-configure cookie-parser.
+-set cookie with the token.
+16.Implement Logout.
+17.Authentication middleware.
+-create middlare directory
+-add auth middleware and import in in express config below cookieParser
+-decode the token
+-handle invalid token
 
 
