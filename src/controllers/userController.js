@@ -7,10 +7,10 @@ router.get('/register', (req, res) => {
 
 });
 router.post('/register', async (req, res) => {
-    const { firstName, lastName, email, password, rePassword } = req.body;
+    const { firstName, lastName, email, password, repeatPassword } = req.body;
 
     await userService.register({
-        firstName, lastName, email, password, rePassword
+        firstName, lastName, email, password, repeatPassword,
     });
 
     res.redirect('/users/login');

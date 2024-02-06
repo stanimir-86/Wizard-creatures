@@ -26,8 +26,9 @@ JS Backend
 -render register page.
 -render login page.
 11.Add user model.
--simple validation in Schema
--add method for register
--create first User record in the DB
+-simple validation in Schema.
+-add method for register.
+-create first User record in the DB.
+-validate password missmach
 
 

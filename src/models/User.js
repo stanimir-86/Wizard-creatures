@@ -7,7 +7,11 @@ const userSchema = new mongoose.Schema({
     password: { type: String, required: true },
 });
 
-
+userSchema.virtual('repeatPassword').set(function (value) {
+    if (value !== this.password) {
+        throw new Error('Password missmatch')
+    }
+})
 
 const User = mongoose.model('User', userSchema);
 module.exports = User;
