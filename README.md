@@ -48,13 +48,18 @@ JS Backend
 -set cookie with the token.
 16.Implement Logout.
 17.Authentication middleware.
--create middlare directory
--add auth middleware and import in in express config below cookieParser
--decode the token
--handle invalid token
--provide authorization
-18.Dynamic navigation
--conditional options in navigation
--add data to res.locals for hbs templates
+-create middlare directory.
+-add auth middleware and import in in express config below cookieParser.
+-decode the token.
+-handle invalid token.
+-provide authorization.
+18.Dynamic navigation.
+-conditional options in navigation.
+-add data to res.locals for hbs templates.
+19.Error handling.
+-add 404 page.
+-redirect missing rout to 404.
+-add error message util.
+20.Show error notification.
 
 
