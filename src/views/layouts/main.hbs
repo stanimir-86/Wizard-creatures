@@ -42,10 +42,14 @@
             </ul>
 
         </nav>
+        {{#each errorMessages}}
+        <div class="error-container">
+            <p>{{this}}</p>
+        </div>
+
         {{{body}}}
 
-
-
+        {{/each}}
         <footer>
             © JS Back-End Exam 2023
         </footer>
