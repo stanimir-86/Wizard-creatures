@@ -48,9 +48,12 @@ router.get('/:creatureId/details', async (req, res) => {
     const { creatureId } = req.params;
 
     const creature = await creatureService.singleCreature(creatureId).lean();
-   
 
-    res.render('post/details', { creature });
+    const { user } = req;
+    const { owner } = creature;
+    const isOwner = user?._id === owner.toString();
+
+    res.render('post/details', { creature, isOwner });
 });
 
 module.exports = router;
