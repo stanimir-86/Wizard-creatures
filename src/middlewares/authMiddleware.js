@@ -15,7 +15,7 @@ exports.auth = async (req, res, next) => {
         } catch (error) {
             console.log({ error });
             res.clearCookie('token');
-            res.redirect('/user/login')
+            res.redirect('/users/login')
         }
 
         return;
@@ -23,7 +23,7 @@ exports.auth = async (req, res, next) => {
     } else {
         next();
     }
-}
+};
 
 exports.isAuth = (req, res, next) => {
 

@@ -11,7 +11,7 @@ const app = express();
 
 //Express Config
 app.use(express.static(path.resolve(__dirname, './public')));
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: false }));//config body parser
 app.use(cookieParser());
 app.use(auth);
 
