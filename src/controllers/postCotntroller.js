@@ -55,8 +55,11 @@ router.get('/:creatureId/details', async (req, res) => {
     const { user } = req;
     const { owner } = creature;
     const isOwner = user?._id === owner.toString();
+    const hasVoted = creature.votes?.some((v) => v?.toString() === user?._id);
 
-    res.render('post/details', { creature, isOwner });
+    const joinedEmailsOfOwners = creature.votes.map((v) => v.email).join(', ');
+
+    res.render('post/details', { creature, isOwner, hasVoted, joinedEmailsOfOwners });
 });
 
 router.get('/:creatureId/edit', async (req, res) => {
@@ -111,7 +114,7 @@ router.get('/:creatureId/vote', async (req, res) => {
 
     await creatureService.addVotesToCreature(creatureId, _id)
 
-    
+
 
     res.redirect(`/posts/${creatureId}/details`)
 });
