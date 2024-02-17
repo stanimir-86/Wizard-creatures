@@ -55,7 +55,7 @@ router.get('/:creatureId/details', async (req, res) => {
     const { user } = req;
     const { owner } = creature;
     const isOwner = user?._id === owner.toString();
-    const hasVoted = creature.votes?.some((v) => v?.toString() === user?._id);
+    const hasVoted = creature.votes?.some((v) => v?._id.toString() === user?._id);
 
     const joinedEmailsOfOwners = creature.votes.map((v) => v.email).join(', ');
 
