@@ -31,4 +31,4 @@ exports.isAuth = (req, res, next) => {
         return res.redirect('/users/login')
     }
     next();
-}
+};

@@ -1,4 +1,6 @@
 const router = require('express').Router();
+const { isAuth } = require('../middlewares/authMiddleware.js');
+const { extractErrorMsgs } = require('../utils/errorHandler.js');
 const creatureService = require('./../services/creatureService.js');
 
 router.get('/all', async (req, res) => {
@@ -8,7 +10,7 @@ router.get('/all', async (req, res) => {
     res.render('post/all-posts', { creatures });
 });
 
-router.get('/create', (req, res) => {
+router.get('/create', isAuth, (req, res) => {
 
     res.render('post/create');
 });
@@ -33,13 +35,19 @@ router.post('/create', async (req, res) => {
         description,
         owner: req.user,
     }
+    try {
+        await creatureService.create(payload);
+        res.redirect('/posts/all');
 
-    await creatureService.create(payload);
+    } catch (error) {
+        const errorMessages = extractErrorMsgs(error);
+        res.status(404).render('posts/create', { errorMessages })
+    }
 
-    res.redirect('/posts/all');
+   
 });
 
-router.get('/profile', async (req, res) => {
+router.get('/profile', isAuth, async (req, res) => {
     const { user } = req;
     const myCreatures = await creatureService.getMyCreatures(user?._id).lean();
 
