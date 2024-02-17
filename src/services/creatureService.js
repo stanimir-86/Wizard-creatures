@@ -12,3 +12,14 @@ exports.delete = (creatureId) => Creature.findByIdAndDelete(creatureId);
 
 exports.getMyCreatures = (ownerId) => Creature.find({ owner: ownerId }).populate('owner');
 
+exports.addVotesToCreature = async (creatureId, userId) => {
+    const creature = await this.singleCreature(creatureId);
+    const isExistingInVotes = creature.votes.some(v => v?.toString() === userId);
+
+    if (isExistingInVotes) {
+        return
+    }
+    creature.votes.push(userId);
+    return creature.save();
+}
+

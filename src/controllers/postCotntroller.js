@@ -105,4 +105,15 @@ router.get('/:creatureId/delete', async (req, res) => {
 
 });
 
+router.get('/:creatureId/vote', async (req, res) => {
+    const { creatureId } = req.params;
+    const { _id } = req.user;
+
+    await creatureService.addVotesToCreature(creatureId, _id)
+
+    
+
+    res.redirect(`/posts/${creatureId}/details`)
+});
+
 module.exports = router;
